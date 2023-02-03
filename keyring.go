@@ -152,6 +152,9 @@ func CreateKeyring(parent Keyring, name string) (NamedKeyring, error) {
 
 	if ttl > 0 {
 		err = keyctl_SetTimeout(ring.id, ttl)
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	return ring, nil

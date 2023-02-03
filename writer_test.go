@@ -41,6 +41,10 @@ func TestStreamWriterUpdate(t *testing.T) {
 	}
 
 	ring, err = CreateKeyring(ring, "test")
+	if err != nil {
+		t.Fatal(err)
+	}
+
 	var key *Key
 
 	for key == nil {
