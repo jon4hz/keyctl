@@ -1,4 +1,4 @@
-module github.com/jsipprell/keyctl
+module github.com/jon4hz/keyctl
 
 go 1.19
 
